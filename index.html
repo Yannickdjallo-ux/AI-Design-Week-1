@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <label class="theme-toggle" for="theme-toggle">
+        <span class="theme-toggle-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            </svg>
+        </span>
+        <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Toggle dark mode">
+        <span class="theme-toggle-track" aria-hidden="true"></span>
+        <span class="theme-toggle-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </span>
+    </label>
     <div class="cards-container">
         <div class="card">
             <h1 class="card-title">Hobby</h1>
@@ -48,14 +63,38 @@
                         <span class="checkmark">✓</span>
                         Background Agents
                     </li>
-                    <li>
-                        <span class="checkmark">✓</span>
-                        Maximum context windows
-                    </li>
                 </ul>
             </div>
             <button class="download-button">Get Pro</button>
         </div>
+        <div class="card">
+            <h1 class="card-title">God-mode</h1>
+            <p class="card-price">$99/mo.</p>
+            <div class="card-content">
+                <p class="includes-text">Everything in Pro, plus:</p>
+                <ul class="features-list">
+                    <li>
+                        <span class="checkmark">✓</span>
+                        Unlimited Agent requests
+                    </li>
+                    <li>
+                        <span class="checkmark">✓</span>
+                        Priority model access
+                    </li>
+                    <li>
+                        <span class="checkmark">✓</span>
+                        Dedicated support line
+                    </li>
+                </ul>
+            </div>
+            <button class="download-button">Get God-mode</button>
+        </div>
     </div>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode', themeToggle.checked);
+        });
+    </script>
 </body>
 </html>
