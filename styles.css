@@ -100,8 +100,16 @@ body.dark-mode .theme-toggle-icon {
     border-radius: 4px;
     padding: 16px;
     width: 320px;
+    height: 380px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
     transition: background-color 0.2s ease;
+}
+
+.card-top {
+    flex: 1;
+    min-height: 0;
 }
 
 body.dark-mode .card {
@@ -109,8 +117,10 @@ body.dark-mode .card {
 }
 
 .card-title {
+    font-size: 24px;
+    font-weight: 500;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
     transition: color 0.2s ease;
 }
 
@@ -118,25 +128,43 @@ body.dark-mode .card-title {
     color: #f0f0f0;
 }
 
-.card-price {
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 24px;
+.card-price,
+.card-price-amount,
+.card-price-period {
+    color: rgb(38 37 30 / 50%);
     transition: color 0.2s ease;
 }
 
-body.dark-mode .card-price {
-    color: #aaa;
+body.dark-mode .card-price,
+body.dark-mode .card-price-amount,
+body.dark-mode .card-price-period {
+    color: rgb(240 240 240 / 50%);
+}
+
+.card-price {
+    font-size: 22px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: baseline;
 }
 
 .card-content {
-    margin-bottom: 32px;
+    margin-bottom: 0;
 }
 
+.card-price-amount {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.card-price-period {
+    font-size: 14px;
+    font-weight: 400;
+}
 .includes-text {
     font-size: 16px;
-    color: #333;
-    margin-bottom: 16px;
+    color: rgb(38 37 30 / 50%);
+    margin: 16px 0;
     transition: color 0.2s ease;
 }
 
@@ -152,9 +180,9 @@ body.dark-mode .includes-text {
 .features-list li {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
-    font-size: 15px;
-    color: #333;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: rgb(38 37 30 / 100%);
     transition: color 0.2s ease;
 }
 
@@ -163,13 +191,14 @@ body.dark-mode .features-list li {
 }
 
 .checkmark {
-    color: #4a4a4a;
-    font-size: 18px;
-    margin-right: 12px;
-    font-weight: bold;
+    color: #00CC66;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: regular;
 }
 
 .download-button {
+    margin-top: auto;
     width: fit-content;
     background-color: #00CC66;
     border: none;
@@ -177,7 +206,7 @@ body.dark-mode .features-list li {
     padding: 14px 24px;
     font-size: 16px;
     font-weight: 500;
-    color: #fff;
+    color: #002010;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
